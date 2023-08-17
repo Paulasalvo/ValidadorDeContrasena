@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/validatorFragment">
+
+    <fragment
+        android:id="@+id/validatorFragment"
+        android:name="com.example.interfaznavegacion.ValidatorFragment"
+        android:label="fragment_validator"
+        tools:layout="@layout/fragment_validator" >
+        <action
+            android:id="@+id/action_validatorFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.interfaznavegacion.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_validatorFragment"
+            app:destination="@id/validatorFragment" />
+    </fragment>
+</navigation>
